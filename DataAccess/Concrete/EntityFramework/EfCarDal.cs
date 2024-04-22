@@ -36,7 +36,7 @@ namespace DataAccess.Concrete.EntityFramework
         {
             using (CarRecapProjectContext context = new CarRecapProjectContext())
             {
-                return context.Set<Car>().SingleOrDefault(filter);
+                return context.Set<Car>().FirstOrDefault(filter);
             }
         }
 
@@ -44,8 +44,8 @@ namespace DataAccess.Concrete.EntityFramework
         {
             using (CarRecapProjectContext context = new CarRecapProjectContext())
             {
-                return filter == null 
-                    ? context.Set<Car>().ToList() 
+                return filter == null
+                    ? context.Set<Car>().ToList()
                     : context.Set<Car>().Where(filter).ToList();
             }
         }
