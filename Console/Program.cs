@@ -36,11 +36,13 @@ Console.WriteLine("------------------------------------------------------");
 ColorManager colorManager = new ColorManager(new EfColorDal());
 Color color1 = new Color { ColorId = 11, ColorName = "Kahverengi" };
 Color color2 = new Color { ColorId = 11, ColorName = "Pembe" };
+Color color3 = new Color { ColorId = 12, ColorName = "Eflatun" };//Oluşturuldu fakat veri tabanında yok;
 
 //colorManager.Add(color1);
 //colorManager.Delete(color1);
 //colorManager.Update(color2);
 colorManager.Get(color2);
+colorManager.Get(color3);
 
 Console.WriteLine("------------------------------------------------------");
 
