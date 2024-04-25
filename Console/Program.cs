@@ -51,4 +51,11 @@ foreach (var color in colorManager.GetAll())
     Console.WriteLine(color.ColorName);
 }
 
+Console.WriteLine("------------------------------------------------------");
+
+foreach(var car in carManager.GetCarDetails())
+{
+    Console.WriteLine(car.Description + " / " + car.BrandName + " / " + car.ColorName + " / " + car.DailyPrice);
+}
+
 Console.ReadLine();
